@@ -13,13 +13,10 @@ npm-debug.log*
 # Ignore environment variable files
 .env
 
-# Ignore compiled HTML directory
-Compiled-HTML/
-
 # Ignore temporary files and directories
 tmp/
 temp/
 
 # Ignore build output directories
 dist/
-build
+build/

@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title CRM Dashboard
+    link(rel='stylesheet', href='css/styles.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap')
+    
+  body
+    .container
+      .sidebar-and-header-container
+        include header.pug
+        include sidebar.pug 
+      .main-content-container
+        include greetings.pug
+        main.main-content
+          section.customers
+            h2.customers__title All Customers
+            p.customers__active Active Members
+            .customers__search-container
+              input.customers__search(type='text', placeholder='Search')
+              img.customers__search-icon(src='/images/search.svg')
+            .customers__table-container
+              table.customers__table
+                thead
+                  tr
+                    th Customer Name
+                    th Company
+                    th Phone Number
+                    th Email
+                    th Country
+                    th.status-column  Status
+                tbody
+                  include table.pug
+            .pagination-container
+              .pagination-text Showing data 1 to 8 of 256K entries
+              .pagination
+                ul.pagination__list
+                  li.pagination__item
+                    a.pagination__link(href='#') &laquo;
+                  li.pagination__item
+                    a.pagination__link(href='#') 1
+                  li.pagination__item
+                    a.pagination__link(href='#') 2
+                  li.pagination__item
+                    a.pagination__link(href='#') 3
+                  li.pagination__item
+                    a.pagination__link(href='#') 4
+                  li.pagination__item
+                    a.pagination__link(href='#') ...
+                  li.pagination__item
+                    a.pagination__link(href='#') 40
+                  li.pagination__item
+                    a.pagination__link(href='#') &raquo;
+    
+
